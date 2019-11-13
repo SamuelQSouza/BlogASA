@@ -1,0 +1,14 @@
+mong:
+  image: mongo
+  container_name: mong
+  ports:
+    - 27017:27017
+
+app:
+  build: .
+  ports: 
+    - "8082:8082"
+  links: 
+    - "mong:mongo"
+  command: "npm start"
+

@@ -1,0 +1,45 @@
+<style>
+  
+.form-signin {
+  width: 100%;
+  max-width: 500px;
+  padding: 15px;
+  margin: auto;
+}
+
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 1;
+}
+
+.card{
+    max-width: 520px;
+    border-radius: 1.75%;
+    margin-right: 10px;
+}
+
+</style>
+
+  <div class="card ">
+    <div class="card-body ">
+
+    <form class="form-signin" method="POST" action="">
+        <h2>Crie sua conta</h2>
+        <label for="nome">Nome: </label>
+        <input type="text" name="nome" class="form-control" required>
+        <label for="email">Email: </label>
+        <input type="email" name="email" class="form-control" required>
+        <label for="senha">Senha: </label>
+        <input type="password" name="senha" class="form-control" required>
+        <label for="senha2">Repita a senha: </label>
+        <input type="password" name="senha2" class="form-control" required>
+        <button class="btn btn-lg btn-primary btn-block mt-5" type="submit">Criar conta</button>
+    </form>
+    </div>
+  </div>

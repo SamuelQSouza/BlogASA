@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark"> 
+  <strong class="navbar-brand">Blog de asa</strong>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      
+      {{#if user.isadmin}}
+        <li class="nav-item active">
+          <a class="nav-link" href="/admin/categorias">Categorias</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/admin/postagens">Postagens</a>
+        </li>
+      {{else}}
+        <li class="nav-item active">
+          <a class="nav-link" href="/categorias">Categorias</a>
+        </li>
+      {{/if}}
+      {{#if user}}
+        </li>
+          <li class="nav-item active" >
+          <a class="nav-link"  href="/user/logout">Logout</a>
+        </li>
+
+      {{else}}
+        <li class="nav-item active">
+          <a class="nav-link" href="/user/login">Login</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/user/registro">Registro</a>
+        </li>
+      {{/if}}
+
+    </ul>
+    {{#if user}}
+    <ul class="navbar-nav my-2 my-md-0">
+      <li class="nav-item active">
+          <a class="nav-link">Olá {{user.nome}}!</a>
+      </li>
+    </ul>
+    {{/if}}
+  </div>
+</nav>

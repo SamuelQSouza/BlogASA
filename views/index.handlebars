@@ -1,0 +1,29 @@
+<div class="jumbotron">
+  <h1 class="display-4">Bem-vindo ao Blog de ASA</h1>
+  <p class="lead">Este é um blog desenvolvido com Node.js + Express + MongoDB</p>
+  <hr class="my-4">
+  <p>Aqui você vai poder ler sobre topicos de backend, frontend, fullstack, devops e mais!!</p>
+  <a class="btn-link btn-lg" href="/user/registro" rolte="button">Crie uma  conta</a>
+</div>
+<div class="container">
+<h2>Postagens recentes: </h2>
+{{#each postagens}}
+  <div class="card my-4">
+    <div class="card-body">
+      <h3 class="card-title">{{titulo}}</h3>
+      <p class="card-text">{{descricao}}</p>
+      <a href="/postagens/{{slug}}" class="card-link">
+      Leia mais!  
+      </a>        
+    </div>
+    <div class="card-body">
+      <small class="card-text text-muted">{{categoria.nome}} </small>
+      <small class="card-text text-muted">Data publicaçao: {{date}}</small>
+      
+    </div>        
+  </div>
+{{else}}
+<h3 class="mt-4">Nenhuma postagem</h3>
+
+{{/each}}
+</div>
